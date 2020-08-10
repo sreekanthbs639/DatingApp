@@ -16,7 +16,7 @@ namespace DatingApp.API.Data
                 foreach (var user in users)
                 {
                     byte[] passwordhash, passwordSalt;
-                    CreatePasswordHash("password", out passwordSalt, out passwordhash);
+                    CreatePasswordHash("password", out passwordhash, out passwordSalt);
                     
                     user.PasswordHash = passwordhash;
                     user.PasswordSalt = passwordSalt;
